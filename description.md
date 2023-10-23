@@ -20,7 +20,27 @@
 </head>
 
 <body>
-    <h1>Blue Ridge Roleplay is an active roleplay community with </h1>
+    <p1>🌟 Welcome to Blue Ridge Roleplay! 🌟</p1>
+    <br>
+    <p2>🚓 Join the most immersive and action-packed FiveM server - Blue Ridge Roleplay! 🚓</p2>
+    <br>
+    <p3>💼 Seeking a full vMenu server with endless opportunities? Look no further! Blue Ridge Roleplay offers a thrilling gaming experience that'll keep you hooked for hours on end. 💼</p3>
+    <br>
+    <p4>🔥 Active Staff: Our dedicated team of moderators and admins are always online, ensuring a smooth and enjoyable gaming environment for all players. Your questions and concerns will be promptly addressed, so you can focus on the fun! 🔥</p4>
+    <br>
+    <p5>👮‍♂️ Calling all Law Enforcement Officers! Be a part of the elite Leo team and maintain law and order in our vibrant city. Pursue criminals, solve thrilling cases, and uphold justice! 👮‍♂️</p5>
+    <br>
+    <p6>🚒🚑 Are you ready to be a hero? Our various departments are waiting for skilled recruits like you! From firefighting to EMS, there's a role for everyone at Blue Ridge Roleplay. 🚒🚑</p6>
+    <br>
+    <p7>🌟 Open to Suggestions: We value our community's input and constantly strive to improve the server. Share your ideas, and together, we'll make this experience even better! 🌟</p7>
+    <br>
+    <p8>🎉 What are you waiting for? Join Blue Ridge Roleplay now and dive into the ultimate roleplaying adventure. Meet new friends, embark on thrilling missions, and create memories that'll last a lifetime! 🎉</p8>
+    <br>
+    <p9>Don't miss out on the action - Blue Ridge Roleplay awaits! See you in the city! 👋</p9>
+    <br>
+    <br>
+    <br>
+    <a>href="https://cfx.re/join/4q8zlq"><button type="button">Join us Now!</button></a>
 </body>
 
 </html>
