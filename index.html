@@ -13,7 +13,7 @@
         }
         a {
             text-align: center;
-            display: inline-block;
+            display: block;
         }
         body {
             background-image: url("img/Background.png");
@@ -21,11 +21,15 @@
         .button {
             display: inline-block;
             text-align: center;
-            padding: 10px; /* Add padding to center the button content */
+            padding: 10px;
         }
         .button img {
-            width: 50px; /* Adjust the width to your desired size */
-            height: auto; /* Maintains aspect ratio */
+            width: 50px;
+            height: auto;
+            vertical-align: middle; /* Aligns the image vertically within the line */
+        }
+        .button span {
+            vertical-align: middle; /* Aligns the text vertically within the line */
         }
     </style>
 </head>
@@ -34,7 +38,7 @@
     <a href="https://discord.gg/EyNkNp9R8z" class="button discord">
         <button>
             <img src="img/Discord.png" alt="Discord Logo">
-            Join us on Discord
+            <span>Join us on Discord</span>
         </button>
     </a>
     <br>
@@ -42,7 +46,7 @@
     <a href="https://www.tiktok.com/@officalblueridgeroleplay" class="button tiktok">
         <button>
             <img src="img/Tiktok.png" alt="Tiktok Logo">
-            Check us out on Tiktok!
+            <span>Check us out on Tiktok!</span>
         </button>
     </a>
 </body>
