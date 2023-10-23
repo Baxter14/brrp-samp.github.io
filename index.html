@@ -29,19 +29,17 @@
             background-color: transparent; /* Set the background to transparent */
             border: none; /* Remove the border */
         }
-        .button img {
-            width: 25px; /* Adjust the width to make the images smaller */
-            height: auto; /* Maintains aspect ratio */
-            vertical-align: middle;
-            margin-right: 10px; /* Add spacing between image and text */
-        }
         .button span {
             vertical-align: middle;
         }
-        .button discord {
-            background-color: #5865F2;
+        .button.tiktok {
+            background-color: black;
         }
-        button {
+        .button.discord {
+            background-color: #5865F2;
+            color: white;
+        }
+        .custom-button {
             background-color: black;
             color: white;
         }
@@ -49,22 +47,21 @@
 </head>
 <body>
     <div class="navbar">
-    <a href="https://www.tiktok.com/@officalblueridgeroleplay" class="button tiktok">
-        <button>
-            <img src="img/Tiktok.png" alt="Tiktok Logo">
-            <span>Check us out on Tiktok!</span>
-        </button>
-    </a>
-    <a href="https://discord.gg/EyNkNp9R8z" class="button discord">
-        <button>
-            <img src="img/Discord.png" alt="Discord Logo">
-            <span>Join us on Discord</span>
-        </button>
-    </a>
+        <a href="https://www.tiktok.com/@officalblueridgeroleplay" class="button tiktok">
+            <button class="custom-button">
+                <img src="img/Tiktok.png" alt="Tiktok Logo">
+                <span>Check us out on Tiktok!</span>
+            </button>
+        </a>
+        <a href="https://discord.gg/EyNkNp9R8z" class="button discord">
+            <button class="custom-button">
+                <img src="img/Discord.png" alt="Discord Logo">
+                <span>Join us on Discord</span>
+            </button>
+        </a>
     </div>
     <h1>Welcome to Blue Ridge Roleplay!</h1>
     <br>
-    <a href="https://brrp-samp.com/description"><button class="desc">About us</button></a>
-    
+    <a href="https://brrp-samp.com/description"><button class="custom-button">About us</button></a>
 </body>
 </html>
