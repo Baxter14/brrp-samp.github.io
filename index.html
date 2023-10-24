@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/img/Favicon.ico">
     <title>Blue Ridge RP V2.0</title>
+    <script type = "text/javascript">
+        function displayNextImage() {
+            x = (x === images.length - 1) ? 0 : x + 1;
+            document.getElementById("img").src = images[x];
+        }
+
+        function displayPreviousImage() {
+            x = (x <= 0) ? images.length - 1 : x - 1;
+            document.getElementById("img").src = images[x];
+        }
+
+        function startTimer() {
+            setInterval(displayNextImage, 3000);
+        }
+
+        var images = [], x = -1;
+        images[0] = "img/image1.png";
+        images[1] = "img/image2.png";
+        images[2] = "img/image3.png";
+    </script>
     <style>
         .navbar {
             border-radius: 30px;
@@ -135,7 +155,7 @@
     }
     </style>
 </head>
-<body>
+<body onload = "startTimer()">
     <div class="navbar">
         <img src="img/Rplogo.png" alt="RP Logo" class="rp-logo">
         <div class="servertitle">
@@ -171,7 +191,7 @@
     </div>
 
     <div class="scroll-container">
-        <img id="img" src="startpicture.jpg"/>
+        <img id="img" src="img/image2.png"/>
         <button type="button" onclick="displayPreviousImage()">Previous</button>
         <button type="button" onclick="displayNextImage()">Next</button>
     </div>
