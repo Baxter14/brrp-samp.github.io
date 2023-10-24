@@ -1,32 +1,47 @@
 
 <style>
-    .servertitle p {
-            display: block;
-            margin: 65%;
-            width: 300px;
-            height: 35px;
-            color: white;
-            font-size: large;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        .navbar {
+            border-radius: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding: 10px;
+            height: 60px;
         }
-        .button.discord {
-        display: flex; /* Add this line */
-        align-items: center; /* Add this line */
-    }
-
-    .button.tiktok {
-        display: flex; /* Add this line */
-        align-items: center; /* Add this line */
-    }
-    .navbar img.rp-logo {
-            width: 50px;
-            height: auto;
+        .navbar a {
+            text-decoration: none;
+            color: grey;
+            display: inline-block;
+            margin-right: 20px;
+            font-weight: bold;
         }
-        .right-buttons {
+        .navbar img {
+            width: 50px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+        }
+        h1 {
+            text-align: center;
+            color: black;
+        }
+        body {
+            background-image: url("img/Background.png");
+        }
+        .button {
             display: flex;
             align-items: center;
+            background-color: transparent;
+            border: none;
         }
-    .button.tiktok span {
+        .button img {
+            width: 25px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .button span {
+            color: black;
+        }
+        .button.tiktok span {
             color: white;
             font-weight: bold;
         }
@@ -56,40 +71,43 @@
             background-color: grey;
             color: white;
         }
-        .button {
-            display: flex;
-            align-items: center;
-            background-color: transparent;
-            border: none;
-        }
-        .button img {
-            width: 25px;
-            height: auto;
-            margin-right: 10px;
-        }
-        .button span {
-            color: black;
-        }
-        .navbar {
-            border-radius: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: black;
-            padding: 10px;
-            height: 60px;
-        }
-        .navbar a {
-            text-decoration: none;
-            color: grey;
-            display: inline-block;
-            margin-right: 20px;
+        .gridbuttons {
             font-weight: bold;
+            border: none;
+            text-decoration-thickness: 5px;
+            display: block;
+            margin: auto;
+            width: 200px; /* Adjust the width as needed */
+            height: 35px; /* Adjust the height as needed */
+            background-color: blue;
+            color: white;
         }
-        .navbar img {
-            width: 50px; /* Adjust the width as needed */
-            height: auto; /* Maintain aspect ratio */
+        .navbar img.rp-logo {
+            width: 50px;
+            height: auto;
         }
+        .right-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .servertitle p {
+            display: block;
+            margin: 65%;
+            width: 300px;
+            height: 35px;
+            color: white;
+            font-size: large;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        .button.discord {
+        display: flex; /* Add this line */
+        align-items: center; /* Add this line */
+    }
+
+    .button.tiktok {
+        display: flex; /* Add this line */
+        align-items: center; /* Add this line */
+    }
 </style>
 
 
