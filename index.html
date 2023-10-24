@@ -29,48 +29,44 @@
     <style>
         .join {
             position: relative;
-            width: 20%;
-            aspect-ratio: 1 /1;
-            margin: auto;
-            overflow: hidden;
-            border-radius: 50px;
+            background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+            cursor: pointer;
         }
+
         .join:before {
-            content: "";
+            content:"";
             position: absolute;
-            left: -10rem;
-            right: -10rem;
-            top: -10rem;
-            bottom: -10rem;
-            margin: auto;
-            aspect-ratio: 1 / 1;
-            background: conic-gradient(
-                #fd004c,
-                #fe9000,
-                #fff020,
-                #3edf4b,
-                #3363ff,
-                #b102b7,
-                #fd004c
-        );
-            z-index: -2;
-            pointer-events: none;
-            transition: 3s ease;
+            background-color: black;
+            top:5px;
+            left:5px;
         }
-        .join:hover:before {
-            transform: rotate(3600deg);
-            transition: 35s ease;
-        }
+
         .join:after {
-            content: "";
+            content:"";
             position: absolute;
-            left: 1rem;
-            top: 1rem;
-            right: 1rem;
-            bottom: 1rem;
-            background: black;
-            z-index: -2;
-            pointer-events: none;
+            transform: translate(-50%,-50%);
+            top:50%;
+            left:50%;
+            font-family: arial;
+            font-weight: 900;
+            font-size: 25px;
+            background-image: 
+                linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;  
+        }
+        @keyframes move {
+            to {
+                background-position: 2500vh;
+            }
+        }
+
+        .button:hover {
+            animation: move 30s linear infinite;
+        }
+
+        .button:hover:after {
+            animation: move 29s linear infinite;
         }
         .navbar {
             border-radius: 30px;
