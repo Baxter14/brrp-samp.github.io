@@ -124,6 +124,10 @@
         display: flex; /* Add this line */
         align-items: center; /* Add this line */
     }
+
+    .scroll-container {
+        display: block;
+    }
     </style>
 </head>
 <body>
@@ -147,9 +151,12 @@
             </a>
         </div>
     </div>
+
     <h1>Welcome to Blue Ridge Roleplay!</h1>
+
     <br>
     <br> 
+
     <div class="center-align">
         <a href="https://brrp-samp.com/description"><button class="gridbuttons">About us</button></a> 
         <a href="https://blue-ridge-rp.tebex.io/"><button class="gridbuttons">Check out our Tebex!</button></a>
@@ -157,6 +164,25 @@
         <a href="https://docs.google.com/document/d/155NbtAcDNsCYXCosI1BzRY82jnHFzxKfdxnudhwC-bY/edit?addon_store&pli=1"><button class="gridbuttons">Make sure to read the rules!</button></a> 
         <a href="https://brrp-samp.com/founders"><button class="gridbuttons">Our Founders</button></a>
     </div>
-   
+
+    <div class="scroll-container">
+        <script type='text/javascript'>
+            var imageID=0;
+            function changeimage(every_seconds){
+                if(!imageID){
+                    document.getElementById("myimage").src="img/image1.png";
+                    imageID++;
+                }
+                else{if(imageID==1){
+                    document.getElementById("myimage").src="img/image2.png";
+                    imageID++;
+                }else{if(imageID==2){
+                    document.getElementById("myimage").src="img/image3.png";
+                    imageID=0;
+                }}}
+                setTimeout("changeimage("+every_seconds+")",((every_seconds)*1000));
+            }
+         </script>
+    </div>
 </body>
 </html>
