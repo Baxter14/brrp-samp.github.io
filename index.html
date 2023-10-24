@@ -27,6 +27,51 @@
         images[3] = "img/image4.jpg";
     </script>
     <style>
+        .join {
+            position: relative;
+            width: 20%;
+            aspect-ratio: 1 /1;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .join:before {
+            content: "";
+            position: absolute;
+            left: -10rem;
+            right: -10rem;
+            top: -10rem;
+            bottom: -10rem;
+            margin: auto;
+            aspect-ratio: 1 / 1;
+            background: conic-gradient(
+                #fd004c,
+                #fe9000,
+                #fff020,
+                #3edf4b,
+                #3363ff,
+                #b102b7,
+                #fd004c
+        );
+            z-index: -2;
+            pointer-events: none;
+            transition: 3s ease;
+        }
+        .join:hover:before {
+            transform: rotate(3600deg);
+            transition: 35s ease;
+        }
+        .join:after {
+            content: "";
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            background: black;
+            z-index: -2;
+            pointer-events: none;
+        }
         .navbar {
             border-radius: 30px;
             display: flex;
