@@ -149,12 +149,19 @@
     }
 
     .scroll-container {
-        margin: auto;
-        text-align: center;
-        display: inline-block;
-        width: 600px;
-        height: 300px;
-        border-radius: 10px; /* Adjust the radius as needed to control the roundness */
+    margin: auto;
+    text-align: center;
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 600px;
+    height: 300px;
+    border-radius: 10px;
+    }
+
+    .scimage {
+        max-width: 100%; /* Ensure the image doesn't overflow the container */
+        max-height: 100%; /* Ensure the image doesn't overflow the container */
     }
     </style>
 </head>
