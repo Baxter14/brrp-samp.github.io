@@ -1,86 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/img/Favicon.ico">
-    <title>Blue Ridge Twitch</title>
-    <style>
-        #twitch-embed {
-            position: relative;
-            margin: 10% auto 0;
-            border-radius: 4px;
-            background: linear-gradient(0deg, black, #000000);
-            box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
-        }
+	<script>
+      window.setInterval(reloadIFrame, 10000);
 
-        #twitch-embed::before, #twitch-embed::after {
-            content: '';
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            border-radius: 10px;
-            background: linear-gradient(45deg, #e6fb04, #ff6600, #00ff66, #00ffff, #ff00ff, #ff0099, #6e0dd0, #ff3300, #099fff);
-            background-size: 300%;
-            width: calc(100% + 0px);
-            height: calc(100% + 0px);
-            z-index: -1;
-            animation: animate 60s linear infinite;
-        }
-
-        @keyframes animate {
-            0% {
-                background-position: 0 0;
-            }
-            50% {
-                background-position: 400% 0;
-            }
-            100% {
-                background-position: 0 0;
-            }
-        }
-
-        #twitch-embed::after {
-            filter: blur(30px);
-            opacity: .95
-                
-        }
-        body, html {
-            height: 100%;
-            margin-left: 50%;
-            margin-right: 50%;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #000000;
-        }
-        
-        #twitch-embed {
-            margin: auto;
-            text-align: center;
-            display: flex; /* Use flexbox to center the image */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            border-radius: 10px;
-        }
-    </style>
+      function reloadIFrame() {
+          const iframe = document.getElementsByName("online")[0];
+          const proxyURL = "https://your-proxy-service.com/proxy?url=http://206.168.173.34:3045/players.json";
+          fetch(proxyURL)
+            .then(response => response.json())
+            .then(data => {
+              // Display the JSON data in the iframe as formatted text
+              iframe.contentDocument.body.innerHTML = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+              console.error(error);
+            });
+      }
+	</script>
 </head>
+
 <body>
-    <!-- Add a placeholder for the Twitch embed -->
-    <div id="twitch-embed"></div>
-
-    <!-- Load the Twitch embed JavaScript file -->
-    <script src="https://embed.twitch.tv/embed/v1.js"></script>
-
-    <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        width: 854,
-        height: 480,
-        channel: "official_blueridgeroleplay",
-        // Only needed if this page is going to be embedded on other websites
-        parent: ["www.brrp-samp.com"]
-      });
-    </script>
+	<iframe src="about:blank" name="online"></iframe>
 </body>
+</html>
