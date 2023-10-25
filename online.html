@@ -5,13 +5,21 @@
       window.setInterval(reloadIFrame, 10000);
 
       function reloadIFrame() {
-          document.getElementsByName("online")[0].src = document.getElementsByName("online")[0].src;
+          const iframe = document.getElementsByName("online")[0];
+          fetch('http://206.168.173.34:3045/players.json')
+            .then(response => response.json())
+            .then(data => {
+              // Display the JSON data in the iframe as formatted text
+              iframe.contentDocument.body.innerHTML = JSON.stringify(data, null, 2);
+            })
+            .catch(error => {
+              console.error(error);
+            });
       }
 	</script>
 </head>
 
 <body>
-	<iframe src="http://206.168.173.34:3045/players.json" name="online"></iframe>
+	<iframe src="about:blank" name="online"></iframe>
 </body>
-
 </html>
